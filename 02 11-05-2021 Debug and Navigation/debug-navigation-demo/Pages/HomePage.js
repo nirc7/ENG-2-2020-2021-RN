@@ -40,10 +40,20 @@ export default class HomePage extends Component {
             title="Material tab"
             onPress={()=>{ this.props.navigation.navigate('MaterialTabbedPageNavigator'); } } />
         </View>
+        <View style={{ margin: 10 }}>
+          <Button
+            title="open drawer"
+            onPress={()=>{ this.props.navigation.openDrawer(); } } />
+        </View>
+        <View style={{ margin: 10 }}>
+          <Button
+            title="go23 w Data"
+            onPress={()=>{ this.props.navigation.navigate('ThirdPage', { user: 'Lucy ' + new Date().getSeconds() }); } } />
+        </View>
         <Image
           style={{
-            width: width * 0.8,
-            height: screenHeight * 0.5,
+            width: width * 0.5,
+            height: screenHeight * 0.3,
             resizeMode: 'stretch'
           }}
           source={require('../assets/cp.jpg')} />
